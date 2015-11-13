@@ -1,4 +1,4 @@
-# Index, Show, New, Create 
+# Index, Show, New, Create Lab
 
 ## Objectives
 
