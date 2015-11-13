@@ -12,14 +12,14 @@
 
 ## Notes
 
-Give students a bare bone rails app without any models.
+Give students a bare bone rails app without any models. So I'm listing this with the post model, but let's purposefully *do a different domain*
 
 They will need to:
 
-create the post model
-build index with views linking to show
-build show post with views linking to index
-index should link to new_post
-new_post should provide a working form with form_tag that goes to posts#create
-posts#create should work and should redirect to posts show
-ultimately this is the basic for creating and managing data - index, show, new, create. All interlinking correctly.
+ - create the post model
+ - build index with views linking to show
+ - build show post with views linking to index
+ - index should link to new_post
+ - new_post should provide a working form with form_tag that goes to posts#create
+ - posts#create should work and should redirect to posts show
+ - ultimately this is the basic for creating and managing data - index, show, new, create. All interlinking correctly.
