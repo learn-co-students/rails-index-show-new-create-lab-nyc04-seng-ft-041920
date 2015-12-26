@@ -599,3 +599,167 @@ Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "coupons" ("coupon_code", "store", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["coupon_code", "FREESTUFF"], ["store", "Chipotle"], ["created_at", "2015-11-24 16:46:01.382423"], ["updated_at", "2015-11-24 16:46:01.382423"]]
   [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
   [1m[35m (0.9ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.4ms)[0m  DELETE FROM "coupons";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'coupons';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "coupons"
+Processing by CouponsController#create as HTML
+  Parameters: {"coupon"=>{"coupon_code"=>"ASD123", "store"=>"Dean and Deluca"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "coupons" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-12-26 18:28:45.852249"], ["updated_at", "2015-12-26 18:28:45.852249"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/coupons/1
+Completed 302 Found in 26ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "coupons"
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CouponsController#create as HTML
+  Parameters: {"coupon"=>{"coupon_code"=>"ASD123", "store"=>"Dean and Deluca"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "coupons" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-12-26 18:28:45.869016"], ["updated_at", "2015-12-26 18:28:45.869016"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/coupons/1
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+  [1m[35mCoupon Load (0.1ms)[0m  SELECT  "coupons".* FROM "coupons"  ORDER BY "coupons"."id" DESC LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/coupons" for 127.0.0.1 at 2015-12-26 12:28:45 -0600
+Processing by CouponsController#index as HTML
+  [1m[36mCoupon Load (0.1ms)[0m  [1mSELECT "coupons".* FROM "coupons"[0m
+  Rendered coupons/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 163ms (Views: 155.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "coupons" ("coupon_code", "store", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["coupon_code", "ASD123"], ["store", "Chipotle"], ["created_at", "2015-12-26 18:28:46.043835"], ["updated_at", "2015-12-26 18:28:46.043835"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "coupons" ("coupon_code", "store", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["coupon_code", "XYZ098"], ["store", "Jamba"], ["created_at", "2015-12-26 18:28:46.045126"], ["updated_at", "2015-12-26 18:28:46.045126"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/coupons" for 127.0.0.1 at 2015-12-26 12:28:46 -0600
+Processing by CouponsController#index as HTML
+  [1m[35mCoupon Load (0.1ms)[0m  SELECT "coupons".* FROM "coupons"
+  Rendered coupons/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/coupons/new" for 127.0.0.1 at 2015-12-26 12:28:46 -0600
+Processing by CouponsController#new as HTML
+  Rendered coupons/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/coupons/new" for 127.0.0.1 at 2015-12-26 12:28:46 -0600
+Processing by CouponsController#new as HTML
+  Rendered coupons/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Started POST "/coupons" for 127.0.0.1 at 2015-12-26 12:28:46 -0600
+Processing by CouponsController#create as HTML
+  Parameters: {"utf8"=>"✓", "coupon_code"=>"YAYFREE", "store"=>"Hobby Lobby", "authenticity_token"=>"7uvwqY2VW0tBOxAWaNXl8XKHB4O1WfFbIzekRul5hpF3bVzRvWwUsDI+fbC0yxtV5Fbovu6CJCxyR4v1N2yXXQ==", "commit"=>"Submit Coupon"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "coupons" ("coupon_code", "store", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["coupon_code", "YAYFREE"], ["store", "Hobby Lobby"], ["created_at", "2015-12-26 18:28:46.075963"], ["updated_at", "2015-12-26 18:28:46.075963"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/coupons/1
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/coupons/1" for 127.0.0.1 at 2015-12-26 12:28:46 -0600
+Processing by CouponsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCoupon Load (0.1ms)[0m  SELECT  "coupons".* FROM "coupons" WHERE "coupons"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered coupons/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/coupons/new" for 127.0.0.1 at 2015-12-26 12:28:46 -0600
+Processing by CouponsController#new as HTML
+  Rendered coupons/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Started POST "/coupons" for 127.0.0.1 at 2015-12-26 12:28:46 -0600
+Processing by CouponsController#create as HTML
+  Parameters: {"utf8"=>"✓", "coupon_code"=>"FREEITEM", "store"=>"Quip", "authenticity_token"=>"J7HWy/I2BGsPS4om7s6+4TKLwQXRTpxdTH20KvqTyAcO31gsfZDryW98FL4/xlpaiwdMmw/ol/A6T6e4Kv7+BA==", "commit"=>"Submit Coupon"}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "coupons" ("coupon_code", "store", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["coupon_code", "FREEITEM"], ["store", "Quip"], ["created_at", "2015-12-26 18:28:46.108103"], ["updated_at", "2015-12-26 18:28:46.108103"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/coupons/1
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/coupons/1" for 127.0.0.1 at 2015-12-26 12:28:46 -0600
+Processing by CouponsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCoupon Load (0.0ms)[0m  SELECT  "coupons".* FROM "coupons" WHERE "coupons"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered coupons/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[36mCoupon Load (0.1ms)[0m  [1mSELECT  "coupons".* FROM "coupons"  ORDER BY "coupons"."id" DESC LIMIT 1[0m
+  [1m[35m (1.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "coupons" ("coupon_code", "store", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["coupon_code", "FREESTUFF"], ["store", "Chipotle"], ["created_at", "2015-12-26 18:28:46.117327"], ["updated_at", "2015-12-26 18:28:46.117327"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/coupons/1" for 127.0.0.1 at 2015-12-26 12:28:46 -0600
+Processing by CouponsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoupon Load (0.0ms)[0m  [1mSELECT  "coupons".* FROM "coupons" WHERE "coupons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered coupons/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.9ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "coupons" ("coupon_code", "store", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["coupon_code", "FREESTUFF"], ["store", "Chipotle"], ["created_at", "2015-12-26 18:28:46.123058"], ["updated_at", "2015-12-26 18:28:46.123058"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/coupons/1" for 127.0.0.1 at 2015-12-26 12:28:46 -0600
+Processing by CouponsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoupon Load (0.0ms)[0m  [1mSELECT  "coupons".* FROM "coupons" WHERE "coupons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered coupons/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "coupons" ("coupon_code", "store", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["coupon_code", "FREESTUFF"], ["store", "Chipotle"], ["created_at", "2015-12-26 18:28:46.128734"], ["updated_at", "2015-12-26 18:28:46.128734"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/coupons/1" for 127.0.0.1 at 2015-12-26 12:28:46 -0600
+Processing by CouponsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoupon Load (0.0ms)[0m  [1mSELECT  "coupons".* FROM "coupons" WHERE "coupons"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered coupons/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "coupons" ("coupon_code", "store", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["coupon_code", "FREESTUFF"], ["store", "Chipotle"], ["created_at", "2015-12-26 18:28:46.134193"], ["updated_at", "2015-12-26 18:28:46.134193"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/coupons" for 127.0.0.1 at 2015-12-26 12:28:46 -0600
+Processing by CouponsController#index as HTML
+  [1m[36mCoupon Load (0.1ms)[0m  [1mSELECT "coupons".* FROM "coupons"[0m
+  Rendered coupons/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "coupons" ("coupon_code", "store", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["coupon_code", "FREESTUFF"], ["store", "Chipotle"], ["created_at", "2015-12-26 18:28:46.141754"], ["updated_at", "2015-12-26 18:28:46.141754"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
