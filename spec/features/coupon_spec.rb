@@ -8,10 +8,9 @@ describe 'Route to view' do
 end
 
 describe 'Multiple coupons are shown' do
-  let(:index_page_coupon) { FactoryGirl.create(:coupon) }
-
   it 'on the index page' do
-    FactoryGirl.create(:second_coupon)
+    Coupon.create(coupon_code: "ASD123", store: "Chipotle")
+    Coupon.create(coupon_code: "XYZ098", store: "Jamba")
     visit coupons_path
     expect(page).to have_content(/Chipotle|Jamba/)
   end
@@ -47,27 +46,29 @@ describe 'form page' do
 end
 
 describe 'Show page' do
-  let(:show_page_coupon) { FactoryGirl.create(:coupon) }
+  before do
+    @coupon = Coupon.create(coupon_code: "FREESTUFF", store: "Chipotle")
+  end
 
   it 'renders properly' do
-    visit coupon_path(show_page_coupon)
+    visit coupon_path(@coupon)
     expect(page.status_code).to eq(200)
   end
 
   it 'renders the coupon code in a h1 tag' do
-    visit coupon_path(show_page_coupon)
+    visit coupon_path(@coupon)
     expect(page).to have_css("h1", text: "FREESTUFF")
   end
 
   it 'renders the store name in a h1 tag' do
-    visit coupon_path(show_page_coupon)
+    visit coupon_path(@coupon)
     expect(page).to have_css("h1", text: "Chipotle")
   end
 end
 
 describe 'linking from the index page to the show page' do
   it 'index page links to coupon page' do
-    linked_coupon = FactoryGirl.create(:coupon)
+    linked_coupon = Coupon.create(coupon_code: "FREESTUFF", store: "Chipotle")
     visit coupons_path
     expect(page).to have_link(linked_coupon.coupon_code, href: coupon_path(linked_coupon))
   end
