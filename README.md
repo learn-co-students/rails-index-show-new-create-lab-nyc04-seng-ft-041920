@@ -48,3 +48,4 @@ The application you will be building will be a Coupon app. At a high level below
 * [Reading on Create Action](https://github.com/learn-co-curriculum/rails-create-action-readme)
 
 * [Reading on Form Integration](https://github.com/learn-co-curriculum/rails-form_tag-readme)
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-index-show-new-create-lab' title='Index, Show, New, Create Lab'>Index, Show, New, Create Lab</a> on Learn.co and start learning to code for free.</p>
