@@ -40,7 +40,7 @@ The application you will be building will be a Coupon app. At a high level below
 
 * The form should be wired up to the `create` action in the controller and when submitted should create a new record in the `coupons` table with the parameters passed through the form
 
-* The form should use the `redirect_to` helper method to redirect the user to the `show` page template for that `coupon`
+* The controller should use the `redirect_to` helper method to redirect the user to the `show` page template for that `coupon`
 
 
 ## Resources
@@ -49,3 +49,5 @@ The application you will be building will be a Coupon app. At a high level below
 
 * [Reading on Form Integration](https://github.com/learn-co-curriculum/rails-form_tag-readme)
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-index-show-new-create-lab' title='Index, Show, New, Create Lab'>Index, Show, New, Create Lab</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-index-show-new-create-lab'>Index, Show, New, Create Lab</a> on Learn.co and start learning to code for free.</p>
