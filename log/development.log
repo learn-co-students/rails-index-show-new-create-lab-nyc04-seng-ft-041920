@@ -86,3 +86,5 @@ Processing by CouponsController#show as HTML
   [1m[35mCoupon Load (0.1ms)[0m  SELECT  "coupons".* FROM "coupons" WHERE "coupons"."id" = ? LIMIT 1  [["id", 2]]
   Rendered coupons/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.1ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/natalie.perpepaj/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/natalie.perpepaj/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140)
