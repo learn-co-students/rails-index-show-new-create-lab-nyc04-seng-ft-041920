@@ -2,6 +2,7 @@
 
 ## Objectives
 
+
 1. Build a RESTful `index` action
 2. Build a RESTful `show` action
 3. Build a RESTful `new` action
@@ -9,6 +10,7 @@
 5. Link pages using route helpers
 6. Use route helpers in a `redirect_to`
 7. Build a new form with a `form_tag`
+
 
 
 ## Instructions
@@ -49,6 +51,8 @@ The application you will be building is a Coupon app. Below is a high-level over
 
 * [Reading on Create Action](https://github.com/learn-co-curriculum/rails-create-action-readme)
 
+
 * [Reading on Form Integration](https://github.com/learn-co-curriculum/rails-form_tag-readme)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-index-show-new-create-lab' title='Index, Show, New, Create Lab'>Index, Show, New, Create Lab</a> on Learn.co and start learning to code for free.</p>
+
