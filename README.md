@@ -26,7 +26,7 @@ This will be a pretty extensive lab that will combine a number of the concepts t
 
 In this lab, the application you will be starting out with will be completely blank. There are no models, views, controllers, et cetera. It has a number of RSpec and Capybara tests that will all need to pass to complete the lab. The tests can be found in the `spec` directory, in the `models`, `features`, and `controllers` sub-directories. Feel free to walk through the specs to see what behavior the application should have when you're done.
 
-Like many production applications, we've included the `config/secrets.yml` file in the `.gitignore`. This means that you are going to have to create your own `config/secrets.yml` file for the application to run. Don't worry- we've given you a template. Just rename `config/secrets-template.yml` to `config/secrets.yml`, and you should be able to get the application to run.
+**Note:** Like many production applications, we've included the `config/secrets.yml` file in the `.gitignore`. This means that you are going to have to create your own `config/secrets.yml` file for the application to run. Don't worry- we've given you a template. Just rename `config/secrets-template.yml` to `config/secrets.yml`, and you should be able to get the application to run.
 
 The application you will be building is a Coupon app. Below is a high-level overview of the features you'll be building out:
 
