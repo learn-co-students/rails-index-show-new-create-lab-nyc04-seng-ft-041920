@@ -1,0 +1,4 @@
+class Coupon < ApplicationRecord
+
+
+end
