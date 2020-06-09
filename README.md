@@ -23,20 +23,20 @@ This will be a pretty extensive lab that will combine a number of the concepts t
 
 * Linking pages together
 
-
+<!-- 
 In this lab, the application you will be starting out with will be completely blank. There are no models, views, controllers, et cetera. It has a number of RSpec and Capybara tests that will all need to pass to complete the lab. The tests can be found in the `spec` directory, in the `models`, `features`, and `controllers` sub-directories. Feel free to walk through the specs to see what behavior the application should have when you're done.
 
-**Note:** Like many production applications, we've included the `config/secrets.yml` file in the `.gitignore`. This means that you are going to have to create your own `config/secrets.yml` file for the application to run. Don't worry- we've given you a template. Just rename `config/secrets-template.yml` to `config/secrets.yml`, and you should be able to get the application to run.
+**Note:** Like many production applications, we've included the `config/secrets.yml` file in the `.gitignore`. This means that you are going to have to create your own `config/secrets.yml` file for the application to run. Don't worry- we've given you a template. Just rename `config/secrets-template.yml` to `config/secrets.yml`, and you should be able to get the application to run. -->
 
-The application you will be building is a Coupon app. Below is a high-level overview of the features you'll be building out:
+<!-- The application you will be building is a Coupon app. Below is a high-level overview of the features you'll be building out:
 
-* You will need to create a `coupons` table with `coupon_code` and `store` columns, which should both be of the `string` data type.
+* You will need to create a `coupons` table with `coupon_code` and `store` columns, which should both be of the `string` data type. -->
 
-* Your `index` page should show all of the coupons in the database.
+<!-- * Your `index` page should show all of the coupons in the database. -->
+<!-- 
+* The coupon codes on the `index` page should link to their corresponding coupon `show` page. You should use the `link_to` method and route helper methods instead of hard-coding an HTML `<a>` tag. -->
 
-* The coupon codes on the `index` page should link to their corresponding coupon `show` page. You should use the `link_to` method and route helper methods instead of hard-coding an HTML `<a>` tag.
-
-* Your `show` page should render the specific coupon passed to the route. E.g., `coupons/4` should show the coupon with an ID of 4.
+<!-- * Your `show` page should render the specific coupon passed to the route. E.g., `coupons/4` should show the coupon with an ID of 4. -->
 
 * The `new.html.erb` view template should render a form that uses the `form_tag` method.
 
